@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    public static PlayerCtrl instance;
     [Header("Physic")]
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float speed = 5;
@@ -13,12 +14,25 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] protected Animator anim;
     [Header("Sprite Renderer")]
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [Header("Scene")]
+    public string arenaName;
     private void Reset()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(transform.parent.gameObject);
+        }
+        else
+            Destroy(transform.parent.gameObject);
+    }
+
     private void FixedUpdate()
     {
         CheckInput();
