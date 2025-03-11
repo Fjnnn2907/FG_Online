@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd618c4476238c642a0b4b7b0b0244c4, type: 3}
+  m_Name: Hero1
+  m_EditorClassIdentifier: 
+  id: 1
+  icon: {fileID: -2311659948842064771, guid: a8ab2cc1553d7cf49aaaae0fe803efe1, type: 3}
+  nameHero: Vaelin Stormrune
+  backStoryHero: "M\u1ED9t chi\u1EBFn binh mang huy\u1EBFt th\u1ED1ng r\u1ED3ng,
+    \u0111\u01B0\u1EE3c ban ph\u01B0\u1EDBc b\u1EDFi th\u1EA7n s\u1EA5m. Thanh ki\u1EBFm
+    c\u1EE7a anh ta c\xF3 th\u1EC3 tri\u1EC7u h\u1ED3i nh\u1EEFng tia ch\u1EDBp h\u1EE7y
+    di\u1EC7t k\u1EBB th\xF9."

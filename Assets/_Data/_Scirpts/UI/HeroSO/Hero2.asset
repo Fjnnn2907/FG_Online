@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd618c4476238c642a0b4b7b0b0244c4, type: 3}
+  m_Name: Hero2
+  m_EditorClassIdentifier: 
+  id: 2
+  icon: {fileID: -558639596, guid: bf5d63cae895f1c4eb9f23205945d8d8, type: 3}
+  nameHero: Sylara Moon
+  backStoryHero: "M\u1ED9t n\u1EEF ph\xE1p s\u01B0 \u0111\u1EBFn t\u1EEB t\u1ED9c
+    Elf b\xF3ng t\u1ED1i, s\u1EED d\u1EE5ng s\u1EE9c m\u1EA1nh nguy\u1EC1n r\u1EE7a
+    v\xE0 tri\u1EC7u h\u1ED3i sinh v\u1EADt t\u1EEB c\xF5i h\u01B0 v\xF4 \u0111\u1EC3
+    chi\u1EBFn \u0111\u1EA5u."
