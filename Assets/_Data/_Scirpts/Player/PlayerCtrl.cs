@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCtrl : MonoBehaviour
+public class PlayerCtrl : PlayerAbstract
 {
-    public static PlayerCtrl instance;
     [Header("Physic")]
-    [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected float speed = 5;
     [SerializeField] protected Vector2 movement;
     [SerializeField] protected Joystick joystick;
@@ -16,21 +14,14 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [Header("Scene")]
     public string arenaName;
-    private void Reset()
+    protected override void LoadCompoment()
     {
-        rb = GetComponent<Rigidbody2D>();
+        base.LoadCompoment();
+        if(arenaName != null || spriteRenderer != null) return;
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(transform.parent.gameObject);
-        }
-        else
-            Destroy(transform.parent.gameObject);
+
+        Debug.Log(transform.name + ": LoadAnimator end LoadSpriteRenderer", gameObject);
     }
 
     private void FixedUpdate()
@@ -40,7 +31,8 @@ public class PlayerCtrl : MonoBehaviour
     public void SetVeloctiy(float x, float y)
     {
         movement = new Vector2(x, y).normalized * speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
+        //rb.MovePosition(rb.position + movement);
+        MoveParent(movement);
     }
     public void CheckInput()
     {

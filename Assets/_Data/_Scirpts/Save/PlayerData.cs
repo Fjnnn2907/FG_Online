@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 [System.Serializable]
-public class PlayerData : ISave
+public class PlayerData : ISaveable
 {
-    public int id;
     public string name;
+    public int id;
 
-    public string Save()
+    public void SaveData()
     {
-        return JsonUtility.ToJson(this, true);
+        SaveLoadSystem.Save("PlayerData", this);
     }
 
-    public void Load(string json)
+    public void LoadData()
     {
-        JsonUtility.FromJsonOverwrite(json, this);
+        PlayerData data = SaveLoadSystem.Load<PlayerData>("PlayerData");
+        if (data != null)
+        {
+            name = data.name;
+            id = data.id;
+        }
     }
 }

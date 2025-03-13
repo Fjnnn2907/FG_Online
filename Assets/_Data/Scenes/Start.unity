@@ -1152,7 +1152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &479845815
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &579566161
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1227,6 +1227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  inputField: {fileID: 1544415306}
+  selectButton: {fileID: 1410291590}
   characters:
   - {fileID: -2311659948842064771, guid: a8ab2cc1553d7cf49aaaae0fe803efe1, type: 3}
   - {fileID: -558639596, guid: bf5d63cae895f1c4eb9f23205945d8d8, type: 3}
@@ -2816,7 +2818,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1410291588}
   m_OnClick:
     m_PersistentCalls:
