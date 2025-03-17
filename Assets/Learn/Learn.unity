@@ -865,6 +865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthImage: {fileID: 231916752}
   healthTMP: {fileID: 2083036510}
+  manaImage: {fileID: 1250539769}
+  manaTMP: {fileID: 732399286}
 --- !u!4 &805947308
 Transform:
   m_ObjectHideFlags: 0
@@ -1318,6 +1320,7 @@ GameObject:
   - component: {fileID: 1510186539}
   - component: {fileID: 1510186540}
   - component: {fileID: 1510186541}
+  - component: {fileID: 1510186542}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Untagged
@@ -1527,6 +1530,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   maxHealth: 100
+--- !u!114 &1510186542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510186533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2442b2c0a768e4293fe56016a01601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMana: 100
+  maxMana: 100
+  regenManaPerSecond: 1
 --- !u!1 &1623722165
 GameObject:
   m_ObjectHideFlags: 0
